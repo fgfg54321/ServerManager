@@ -1,0 +1,3 @@
+server_controller_homepage:
+    path:     /
+    defaults: { _controller: ServerControllerBundle:Default:index }
