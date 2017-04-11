@@ -1,0 +1,34 @@
+serverinfo_index:
+    path:     /
+    defaults: { _controller: "ServerControllerBundle:ServerInfo:index" }
+    methods:  GET
+
+serverinfo_show:
+    path:     /{id}/show
+    defaults: { _controller: "ServerControllerBundle:ServerInfo:show" }
+    methods:  GET
+
+serverinfo_new:
+    path:     /new
+    defaults: { _controller: "ServerControllerBundle:ServerInfo:new" }
+    methods:  [GET, POST]
+
+serverinfo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ServerControllerBundle:ServerInfo:edit" }
+    methods:  [GET, POST]
+
+serverinfo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ServerControllerBundle:ServerInfo:delete" }
+    methods:  DELETE
+
+serverinfo_getConfig:
+    path:     /getConfig
+    defaults: { _controller: "ServerControllerBundle:ServerInfo:getConfig" }
+    methods:  [GET, POST]
+
+serverinfo_postConfig:
+    path:     /postConfig
+    defaults: { _controller: "ServerControllerBundle:ServerInfo:postConfig" }
+    methods:  [GET, POST]

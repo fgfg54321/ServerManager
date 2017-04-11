@@ -1,3 +1,7 @@
+server_controller_serverinfo:
+    resource: "@ServerControllerBundle/Resources/config/routing/serverinfo.yml"
+    prefix:   /serverinfo
+
 server_controller:
     resource: "@ServerControllerBundle/Resources/config/routing.yml"
     prefix:   /

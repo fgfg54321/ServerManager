@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Serverinfos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Serverid</th>
+                <th>Servername</th>
+                <th>Serverip</th>
+                <th>Serverport</th>
+                <th>Serverstatus</th>
+                <th>Toconnect</th>
+                <th>Fromconnect</th>
+                <th>Serverinfo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for serverInfo in serverInfos %}
+            <tr>
+                <td><a href="{{ path('serverinfo_show', { 'id': serverInfo.id }) }}">{{ serverInfo.id }}</a></td>
+                <td>{{ serverInfo.serverId }}</td>
+                <td>{{ serverInfo.serverName }}</td>
+                <td>{{ serverInfo.serverIp }}</td>
+                <td>{{ serverInfo.serverPort }}</td>
+                <td>{{ serverInfo.serverStatus }}</td>
+                <td>{{ serverInfo.toConnect }}</td>
+                <td>{{ serverInfo.fromConnect }}</td>
+                <td>{{ serverInfo.serverInfo }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('serverinfo_show', { 'id': serverInfo.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('serverinfo_edit', { 'id': serverInfo.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('serverinfo_new') }}">Create a new serverInfo</a>
+        </li>
+    </ul>
+{% endblock %}

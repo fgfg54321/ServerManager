@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Serverinfo</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ serverInfo.id }}</td>
+            </tr>
+            <tr>
+                <th>Serverid</th>
+                <td>{{ serverInfo.serverId }}</td>
+            </tr>
+            <tr>
+                <th>Servername</th>
+                <td>{{ serverInfo.serverName }}</td>
+            </tr>
+            <tr>
+                <th>Serverip</th>
+                <td>{{ serverInfo.serverIp }}</td>
+            </tr>
+            <tr>
+                <th>Serverport</th>
+                <td>{{ serverInfo.serverPort }}</td>
+            </tr>
+            <tr>
+                <th>Serverstatus</th>
+                <td>{{ serverInfo.serverStatus }}</td>
+            </tr>
+            <tr>
+                <th>Toconnect</th>
+                <td>{{ serverInfo.toConnect }}</td>
+            </tr>
+            <tr>
+                <th>Fromconnect</th>
+                <td>{{ serverInfo.fromConnect }}</td>
+            </tr>
+            <tr>
+                <th>Serverinfo</th>
+                <td>{{ serverInfo.serverInfo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('serverinfo_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('serverinfo_edit', { 'id': serverInfo.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

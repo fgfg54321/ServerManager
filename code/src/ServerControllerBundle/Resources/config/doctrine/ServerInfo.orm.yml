@@ -1,0 +1,38 @@
+ServerControllerBundle\Entity\ServerInfo:
+    type: entity
+    table: null
+    repositoryClass: ServerControllerBundle\Repository\ServerInfoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        serverId:
+            type: string
+            length: 255
+            unique: true
+        serverName:
+            type: string
+            length: 255
+            unique: true
+        serverIp:
+            type: string
+            length: 255
+        serverPort:
+            type: string
+            length: 255
+        serverStatus:
+            type: string
+            length: 255
+        toConnect:
+            type: string
+            length: 255
+        fromConnect:
+            type: string
+            length: 255
+        serverInfo:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
